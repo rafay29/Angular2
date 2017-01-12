@@ -27,7 +27,23 @@ let employees: Employee[] = [
 //Filter array based on following conditions:
 //criteria 1: Having age greater than 35
 //criteria 2: Having age between 25 and 30
-var filterdEmps = employees.filter((x) => { return x.age > 35 || (x.age > 25 && x.age < 30) });
+interface IFilter {
+    (emp: Employee): boolean;
+}
+
+function Filter(source: Employee[], func: IFilter): Employee[] {
+    let temp: Employee[] = [];
+
+    source.forEach((e) => {
+        if (func(e)) {
+            temp.push(e);
+        }
+    });
+
+    return temp;
+}
+
+var filterdEmps = Filter(employees, AgeGreaterthan35);
 
 console.log("Employee having age greater than 35 and between 25 and 30");
 filterdEmps.forEach((e) => {
@@ -36,3 +52,21 @@ filterdEmps.forEach((e) => {
     console.log("Age : " + e.age);
     console.log();
 });
+
+filterdEmps = Filter(employees, AgeBtn25and30);
+
+console.log("Employee age between 25 and 30");
+filterdEmps.forEach((e) => {
+    console.log("Id : " + e.empid);
+    console.log("Name : " + e.empname);
+    console.log("Age : " + e.age);
+    console.log();
+});
+
+function AgeGreaterthan35(emp: Employee): boolean {
+    return emp.age > 35;
+}
+
+function AgeBtn25and30(emp: Employee): boolean {
+    return emp.age >= 25 && emp.age <= 30
+}
