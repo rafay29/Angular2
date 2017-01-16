@@ -1,0 +1,21 @@
+<h2>CRUD Component</h2>
+<div *ngIf="data">
+    <table class="table" style="width:100%">
+<tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Username</td>
+    <td>Email</td>
+    <td>Website</td>
+    <td>Phone</td>
+</tr>
+<tr *ngFor="let user of data">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.website}}</td>
+    <td>{{user.phone}}</td>
+</tr>
+</table>
+</div>
