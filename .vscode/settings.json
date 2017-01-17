@@ -6,6 +6,8 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/app/*.js.map":true,
-        "**/app/*.js":true
+        "**/app/*.js":true,
+        "**/app/crud/*.js":true,
+        "**/app/crud/*.js.map":true
     }
 }

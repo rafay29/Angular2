@@ -9,18 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
+var crud_component_1 = require('./crud.component');
+var crud_service_1 = require('./crud.service');
+var crud_route_1 = require('./crud.route');
+var CrudModule = (function () {
+    function CrudModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Hello {{name}}</h1>\n\n    <!-- Router Link -->\n    <a routerLink=\"/xyz\">Bad Route</a>\n    <a routerLink=\"/crud\">CRUD Component</a>\n    <a routerLink=\"/todo\">Todo List Component</a>\n    <!-- Router Link -->\n\n    <!-- Router Outlet -->\n    <router-outlet></router-outlet>\n    <!-- Router Outlet -->\n  ",
+    CrudModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule, forms_1.FormsModule, crud_route_1.default],
+            declarations: [crud_component_1.CrudComponent],
+            providers: [crud_service_1.CRUDService]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CrudModule);
+    return CrudModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CrudModule = CrudModule;
+//# sourceMappingURL=crud.modules.js.map

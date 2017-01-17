@@ -9,18 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var CRUDService = (function () {
+    function CRUDService(http) {
+        this.http = http;
+        console.log("CRUDService constructor.");
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Hello {{name}}</h1>\n\n    <!-- Router Link -->\n    <a routerLink=\"/xyz\">Bad Route</a>\n    <a routerLink=\"/crud\">CRUD Component</a>\n    <a routerLink=\"/todo\">Todo List Component</a>\n    <!-- Router Link -->\n\n    <!-- Router Outlet -->\n    <router-outlet></router-outlet>\n    <!-- Router Outlet -->\n  ",
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    CRUDService.prototype.GetAllUser = function () {
+        return this.http.get('https://jsonplaceholder.typicode.com/users')
+            .map(function (response) { return response.json(); });
+    };
+    CRUDService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], CRUDService);
+    return CRUDService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CRUDService = CRUDService;
+//# sourceMappingURL=crud.service.js.map

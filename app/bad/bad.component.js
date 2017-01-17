@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var BadRouteComponent = (function () {
+    function BadRouteComponent() {
     }
-    AppComponent = __decorate([
+    BadRouteComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Hello {{name}}</h1>\n\n    <!-- Router Link -->\n    <a routerLink=\"/xyz\">Bad Route</a>\n    <a routerLink=\"/crud\">CRUD Component</a>\n    <a routerLink=\"/todo\">Todo List Component</a>\n    <!-- Router Link -->\n\n    <!-- Router Outlet -->\n    <router-outlet></router-outlet>\n    <!-- Router Outlet -->\n  ",
+            moduleId: module.id,
+            selector: 'bad-route',
+            templateUrl: 'bad-route.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], BadRouteComponent);
+    return BadRouteComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.BadRouteComponent = BadRouteComponent;
+//# sourceMappingURL=bad.component.js.map

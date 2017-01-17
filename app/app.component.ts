@@ -4,7 +4,16 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
     <h1>Hello {{name}}</h1>
-    <crud-component></crud-component>
+
+    <!-- Router Link -->
+    <a routerLink="/xyz">Bad Route</a>
+    <a routerLink="/crud">CRUD Component</a>
+    <a routerLink="/todo">Todo List Component</a>
+    <!-- Router Link -->
+
+    <!-- Router Outlet -->
+    <router-outlet></router-outlet>
+    <!-- Router Outlet -->
   `,
 })
 export class AppComponent { name = 'Angular'; }

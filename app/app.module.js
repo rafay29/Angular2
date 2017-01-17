@@ -8,20 +8,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+//=============== Modules ===============//
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+//=============== Modules ===============//
+//=============== Custom Modules ===============//
+var crud_module_1 = require('./crud/crud.module');
+//=============== Custom Modules ===============//
+//=============== Component ===============//
 var app_component_1 = require('./app.component');
-var crud_component_1 = require('./crud.component');
-var crud_service_1 = require('./crud.service');
+// import { CrudComponent } from './crud.component';
+var todo_component_1 = require('./todo/todo.component');
+var bad_component_1 = require('./bad/bad.component');
+//=============== Component ===============//
+//=============== Service ===============//
+// import { CRUDService } from './crud.service';
+var todo_service_1 = require('./todo/todo.service');
+//=============== Service ===============//
+var app_route_1 = require('./app.route');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, http_1.JsonpModule],
-            declarations: [app_component_1.AppComponent, crud_component_1.CrudComponent],
-            providers: [crud_service_1.CRUDService],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, http_1.JsonpModule, app_route_1.default, crud_module_1.CrudModule],
+            declarations: [app_component_1.AppComponent, todo_component_1.TodoComponent, bad_component_1.BadRouteComponent],
+            providers: [todo_service_1.TodoService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
