@@ -8,6 +8,10 @@
         "**/app/*.js.map":true,
         "**/app/*.js":true,
         "**/app/crud/*.js":true,
-        "**/app/crud/*.js.map":true
+        "**/app/crud/*.js.map":true,
+        "**/app/bad/*.js":true,
+        "**/app/bad/*.js.map":true,
+        "**/app/todo/*.js":true,
+        "**/app/todo/*.js.map":true
     }
 }

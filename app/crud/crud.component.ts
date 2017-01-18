@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CRUDService } from './crud.service';
 import { User } from './user.model';
 
@@ -10,7 +11,7 @@ import { User } from './user.model';
 export class CrudComponent implements OnInit {
     private data: User[];
 
-    constructor(private crudservice: CRUDService) {
+    constructor(private router: Router, private crudservice: CRUDService) {
         console.log("CrudComponent constructor.");
     }
 
@@ -21,6 +22,11 @@ export class CrudComponent implements OnInit {
         this.crudservice.GetAllUser().subscribe(
             (data) => { this.data = data; console.log(data) },
             (error) => { console.log(error) });
+    }
+
+    public OnSelect(user: User) {
+        console.log(user);
+        this.router.navigate(['/crud', user.id]);
     }
 }
 

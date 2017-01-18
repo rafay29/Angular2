@@ -16,4 +16,9 @@ export class CRUDService {
         return this.http.get('https://jsonplaceholder.typicode.com/users')
             .map((response: Response) => <User[]>response.json());
     }
+
+    public GetUser(userId: number): Observable<User> {
+        return this.http.get('https://jsonplaceholder.typicode.com/users/' + userId)
+            .map((response: Response) => <User>response.json());
+    }
 }

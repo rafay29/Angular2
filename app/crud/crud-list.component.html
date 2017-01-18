@@ -17,7 +17,8 @@
     <td>{{user.email}}</td>
     <td>{{user.website}}</td>
     <td>{{user.phone}}</td>
-    <td><a routerLink="/crud/{{user.id}}">More Info...</a></td>
+    <!--<td><a routerLink="/crud/{{user.id}}">More Info...</a></td>-->
+    <td><a (click)="OnSelect(user)">More Info...</a></td>
 </tr>
 </table>
 </div>
