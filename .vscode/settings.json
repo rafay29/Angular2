@@ -5,13 +5,15 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/app/*.js.map":true,
-        "**/app/*.js":true,
-        "**/app/crud/*.js":true,
-        "**/app/crud/*.js.map":true,
-        "**/app/bad/*.js":true,
-        "**/app/bad/*.js.map":true,
-        "**/app/todo/*.js":true,
-        "**/app/todo/*.js.map":true
+        "**/app/*.js.map": true,
+        "**/app/*.js": true,
+        "**/app/crud/*.js": true,
+        "**/app/crud/*.js.map": true,
+        "**/app/bad/*.js": true,
+        "**/app/bad/*.js.map": true,
+        "**/app/todo/*.js": true,
+        "**/app/todo/*.js.map": true,
+        "**/app/post/*.js": true,
+        "**/app/post/*.js.map": true
     }
 }

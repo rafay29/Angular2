@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <a routerLink="/xyz">Bad Route</a>
     <a routerLink="/crud">CRUD Component</a>
     <a routerLink="/todo">Todo List Component</a>
+    <a routerLink="/post">Posts</a>
     <!-- Router Link -->
 
     <!-- Router Outlet -->

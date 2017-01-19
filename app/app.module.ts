@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 //=============== Modules ===============//
 
 //=============== Custom Modules ===============//
 import { CrudModule } from './crud/crud.module';
+import { PostModule } from './post/post.module';
 //=============== Custom Modules ===============//
 
 //=============== Component ===============//
@@ -24,7 +26,7 @@ import { TodoService } from './todo/todo.service';
 import routes from './app.route';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, JsonpModule, routes, CrudModule],
+  imports: [BrowserModule, HttpModule, JsonpModule, FormsModule, routes, CrudModule, PostModule],
   declarations: [AppComponent, TodoComponent, BadRouteComponent],
   providers: [TodoService],
   bootstrap: [AppComponent]
