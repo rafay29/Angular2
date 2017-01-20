@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Post } from './post.model';
 
 @Component({
@@ -15,7 +15,15 @@ export class PostDetailComponent {
         this.postDetail = value;
     }
 
+    @Output()
+    public selectedcolor = new EventEmitter<boolean>();;
+
     constructor() {
         console.log("PostDetailComponent constructor.");
+    }
+
+    public OnDivClick(color: any) {
+        console.log(color);
+        this.selectedcolor.emit(color);
     }
 }

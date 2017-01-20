@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [style.background]="bgColor">
     <h1 class="text-center">Post Component</h1>
     <table class="table-striped">
         <tr>
@@ -14,5 +14,5 @@
             <td (click)="GetSelectedPost(post)">{{post.title}}</td>
         </tr>
     </table>
-    <post-detail [PostInput]="selectedpost"></post-detail>
+    <post-detail [PostInput]="selectedpost" (selectedcolor)="OnColorChange($event)"></post-detail>
 </div>

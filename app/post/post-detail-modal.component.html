@@ -1,6 +1,21 @@
 <div *ngIf="postDetail">
-    {{postDetail.userId}}<br>
-    {{postDetail.id}}<br>
-    {{postDetail.title}}<br>
-    {{postDetail.body}}<br>
+    {{postDetail.userId}}<br> {{postDetail.id}}
+    <br> {{postDetail.title}}
+    <br> {{postDetail.body}}
+    <br>
+</div>
+
+<div class="row">
+    <div class="col-md" style="background-color: red" (click)="OnDivClick('red')">Hello</div>
+<div class="col-md" style="background-color: blue" (click)="OnDivClick('blue')">Hello</div>
+<div class="col-md" style="background-color: chartreuse"(click)="OnDivClick('chartreuse')">Hello</div>
+<div class="col-md" style="background-color: cyan"(click)="OnDivClick('cyan')">Hello</div>
+<div class="col-md" style="background-color: darkviolet"(click)="OnDivClick('darkviolet')">Hello</div>
+<div class="col-md" style="background-color: deepskyblue"(click)="OnDivClick('deepskyblue')">Hello</div>
+<div class="col-md" style="background-color: hotpink"(click)="OnDivClick('hotpink')">Hello</div>
+<div class="col-md" style="background-color: green"(click)="OnDivClick('green')">Hello</div>
+<div class="col-md" style="background-color: orangered"(click)="OnDivClick('orangered')">Hello</div>
+<div class="col-md" style="background-color: maroon"(click)="OnDivClick('maroon')">Hello</div>
+<div class="col-md" style="background-color: olivedrab"(click)="OnDivClick('olivedrab')">Hello</div>
+<div class="col-md" style="background-color: firebrick"(click)="OnDivClick('firebrick')">Hello</div>
 </div>
