@@ -1,0 +1,22 @@
+<h1 class="text-center">Toast Componnet</h1>
+<toaster-container [toasterconfig]="toasterconfig"></toaster-container>
+<div class="row">
+    <div class="col-md-6">Success PoP Toast</div>
+    <div class="col-md-2"><button class="btn" (click)="popToast('success')">Success</button></div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row">
+    <div class="col-md-6">Warning PoP Toast</div>
+    <div class="col-md-2"><button class="btn" (click)="popToast('warning')">Warning</button></div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row">
+    <div class="col-md-6">Error PoP Toast</div>
+    <div class="col-md-2"><button class="btn" (click)="popToast('error')">Error</button></div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row">
+    <div class="col-md-6">Information PoP Toast</div>
+    <div class="col-md-2"><button class="btn" (click)="popToast('info')">Information</button></div>
+    <div class="col-md-4"></div>
+</div>
