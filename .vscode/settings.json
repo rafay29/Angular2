@@ -14,6 +14,8 @@
         "**/app/todo/*.js": true,
         "**/app/todo/*.js.map": true,
         "**/app/post/*.js": true,
-        "**/app/post/*.js.map": true
+        "**/app/post/*.js.map": true,
+        "**/app/modal/*.js": true,
+        "**/app/modal/*.js.map": true
     }
 }

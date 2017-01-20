@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     <a routerLink="/crud">CRUD Component</a>
     <a routerLink="/todo">Todo List Component</a>
     <a routerLink="/post">Posts</a>
+    <a routerLink="/modal">Modal BootStrap</a>
     <!-- Router Link -->
 
     <!-- Router Outlet -->
