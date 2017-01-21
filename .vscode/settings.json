@@ -2,22 +2,20 @@
 {
     "files.exclude": {
         "**/.git": true,
+        "**/.gitignore": true,
+        "**/CHANGELOG.md": true,
+        "**/favicon.ico": true,
+        "**/karma.conf.js": true,
+        "**/karma-test-shim.js": true,
+        "**/LICENSE": true,
+        "**/protractor.config.js": true,
+        "**/README.md": true,
+        "**/non-essential-files.txt": true,
+        "**/*.spec*.ts":true,
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/app/*.js.map": true,
-        "**/app/*.js": true,
-        "**/app/crud/*.js": true,
-        "**/app/crud/*.js.map": true,
-        "**/app/bad/*.js": true,
-        "**/app/bad/*.js.map": true,
-        "**/app/todo/*.js": true,
-        "**/app/todo/*.js.map": true,
-        "**/app/post/*.js": true,
-        "**/app/post/*.js.map": true,
-        "**/app/modal/*.js": true,
-        "**/app/modal/*.js.map": true,
-        "**/app/toast/*.js": true,
-        "**/app/toast/*.js.map": true
+        "**/app/**/*.js.map": true,
+        "**/app/**/*.js": true
     }
 }
