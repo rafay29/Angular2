@@ -1,0 +1,10 @@
+black	:#000000
+blue	:#2299dd
+green	:#22df80
+orange	:#eb7a55
+pink	:#e90f92
+purple	:#7c60e0
+red	:#ee3148
+silver	:#d6d6d6
+white	:#ffffff
+yellow	:#fcd25a
