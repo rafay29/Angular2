@@ -28,6 +28,9 @@ import { Component } from '@angular/core';
           <li class="nav-item">
             <a class="nav-link" routerLink="/toast">Toast</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/form">Form</a>
+          </li>
         </ul>
       </div>
     </nav>
