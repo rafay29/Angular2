@@ -1,6 +1,6 @@
 //=============== Modules ===============//
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -44,7 +44,7 @@ import routes from './app.route';
     FormModule
   ],
   declarations: [AppComponent, TodoComponent, BadRouteComponent],
-  providers: [TodoService],
+  providers: [TodoService, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { User } from './user.model';
 import { CRUDService } from './crud.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     moduleId: module.id,
@@ -12,7 +13,7 @@ import { CRUDService } from './crud.service';
 export class UserDetailComponent implements OnInit {
     public user: User;
 
-    constructor(private route: ActivatedRoute, private router: Router, private crudservice: CRUDService) {
+    constructor(private route: ActivatedRoute, private router: Router, private crudservice: CRUDService, private titleService: Title) {
         console.log("UserDetailComponent constructor.");
     }
 
@@ -21,6 +22,6 @@ export class UserDetailComponent implements OnInit {
             .switchMap((params: Params) => this.crudservice.GetUser(params['id']))
             .subscribe((user: User) => this.user = user);
 
-        console.log(this.user);
+        this.titleService.setTitle("User");
     }
 }
